@@ -188,7 +188,7 @@ def chart_head(eyebrow, title, sub=""):
 
 
 def takeaway(text):
-    st.html(f'<p class="take"><span>Why it matters</span>{text}</p>')
+    st.html(f'<p class="take">{text}</p>')
 
 
 def coverage(title, items):

@@ -24,6 +24,8 @@ pg = st.navigation(pages, position="top")
 
 months = list(pd.date_range("2005-01-01", core.LAST, freq="MS"))
 with st.sidebar:
+    st.html(f'<div class="sb-mast"><p class="sb-kick">Briefing dashboard</p><p class="sb-title">Two Tariff Walls</p>'
+            f'<p class="sb-sub">Mexico\'s light-vehicle market in INEGI\'s registry, data to {core.LAST:%B %Y}</p></div>')
     st.html('<p class="sb-h">Time window</p>')
     st.select_slider("Months shown", options=months, value=(pd.Timestamp("2016-01-01"), core.LAST),
                      format_func=lambda d: d.strftime("%b %Y"), key="window", label_visibility="collapsed")

@@ -9,7 +9,6 @@ header[data-testid="stHeader"] {background: rgba(255,255,255,.92); backdrop-filt
 [data-testid="stTopNavLink"][aria-current="page"] {background: transparent !important;}
 [data-testid="stTopNavLink"][aria-current="page"] p {color: var(--navy); font-weight: 600;}
 [data-testid="stTopNavLink"][aria-current="page"]::after {content: ""; position: absolute; left: 10px; right: 10px; bottom: -9px; height: 2px; background: var(--navy); border-radius: 2px;}
-[data-testid="stSidebar"] {border-right: 1px solid var(--line);}
 [data-testid="stSidebarContent"] {padding-top: .5rem;}
 
 /* ---------- headings */
@@ -30,7 +29,6 @@ div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapp
 
 /* ---------- story pieces */
 .take {font-size: .95rem; line-height: 1.55; color: var(--ink); margin: .3rem 0 .1rem; padding: .1rem 0 .1rem .9rem; border-left: 3px solid var(--navy);}
-.take span {display: block; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); margin-bottom: .15rem;}
 .cover {background: #FFF8EA; border: 1px solid #F0DDB5; border-radius: 10px; padding: .8rem 1rem .6rem; margin: .2rem 0 .6rem;}
 .cover .ct {font-weight: 600; color: #6B4300; margin: 0 0 .35rem; font-size: .92rem; display: flex; align-items: center; gap: .5rem;}
 .cover .ci {display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--amber); color: #fff; font-size: .72rem; font-weight: 700;}
@@ -86,8 +84,13 @@ div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapp
 .recs b {color: var(--navy);}
 
 /* ---------- sidebar + footer */
-.sb-h {font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--navy); margin: .4rem 0 0;}
-.sb-note {font-size: .8rem; line-height: 1.5; color: var(--muted); margin: .2rem 0 .4rem;}
+.sb-mast {padding: 0 0 .3rem;}
+.sb-kick {font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #A9C6EA; margin: 0;}
+.sb-title {font-family: "Source Serif 4", Georgia, serif; font-size: 1.55rem; font-weight: 700; line-height: 1.15; color: #fff; margin: .25rem 0 .35rem;}
+.sb-sub {font-size: .82rem; line-height: 1.45; color: rgba(243,241,234,.72); margin: 0;}
+.sb-h {font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #A9C6EA; margin: .4rem 0 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.16);}
+[data-testid="stSidebar"] [data-baseweb="tag"], [data-testid="stSidebar"] [data-baseweb="tag"] * {color: #16263D !important;}  /* chips: dark text on the light-blue fill */
+.sb-note {font-size: .8rem; line-height: 1.5; color: rgba(243,241,234,.62); margin: .2rem 0 .4rem;}
 .foot {margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--line);}
 .foot p {font-size: .78rem; line-height: 1.55; color: var(--muted); margin: 0 0 .35rem; max-width: 980px;}
 

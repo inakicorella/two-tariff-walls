@@ -158,9 +158,13 @@ def page():
                    "Together they show that the 2026 jump in plug-in and electric cars is mostly a jump in Chinese imports.")
     kpis(d, end, techs)
     core.coverage("What this page cannot see", [
-        "<b>BYD and Tesla do not report</b>, so battery-electric and plug-in sales are undercounted, probably by a lot: BYD is widely reported as Mexico's top seller of electric and plug-in cars.",
-        "This table has <b>no brand, model or country of origin</b>. The link to Chinese imports comes from the sales table, by model name (EM-i, iDD, PHEV, EV...), so it is a lower bound: plug-ins without a telltale name are missed.",
-        f"INEGI fills months it has not published with zeros. Months after {end:%B %Y} are dropped. In 2016 some cells say \"-\" and are read as zero.",
+        "<b>BYD and Tesla don't report to INEGI.</b> BYD is widely reported as Mexico's best-selling electric brand, "
+        "so real plug-in and electric sales are well above what you see here.",
+        "<b>This table doesn't say who made the car or where.</b> To link electric sales to Chinese imports, I look in the sales table "
+        "for model names that give away a plug-in or electric car (EM-i, DM-i, PHEV, EV). Models without one slip through, "
+        "so the Chinese count here is a minimum.",
+        f"<b>INEGI fills months it hasn't published with zeros</b>, so the series stops at {core.LAST:%B %Y}. "
+        "A few 2016 cells show a dash instead of a number; I count those as zero.",
     ])
     monthly(d, techs, start, end, label)
     c1, c2 = st.columns([1.5, 1], gap="medium")
