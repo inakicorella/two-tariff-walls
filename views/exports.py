@@ -208,10 +208,13 @@ def page():
     destinations(ef, dests, start, end, label)
     prelim = e[e.status == "Preliminary"].date.max()
     core.coverage("What this page cannot see", [
-        f"<b>{prelim:%B %Y}</b> production and exports are <b>preliminary</b>. INEGI revises them in next month's report, and they stay \"revised\" for three years before becoming definitive.",
-        "The registry reports output <b>by brand, not by plant or state</b>. The CIVAC and COMPAS closures come from press reports, not from INEGI.",
-        "Only automakers affiliated with AMIA report. Exports carry no value or price, so a shift to cheaper or pricier models is invisible here.",
-        "Some exports have no destination (\"not specified\", 201k units in 2017 alone). They are grouped with the rest of the world.",
+        f"<b>{prelim:%B %Y} numbers are still preliminary.</b> INEGI revises them next month, "
+        "and they stay \"revised\" for three years before they become final.",
+        "<b>INEGI counts cars by brand, not by plant or state.</b> The CIVAC and COMPAS closures come from the press, not from the registry.",
+        "<b>Only automakers that belong to AMIA report</b>, so any exporter outside it is missing.",
+        "<b>Exports come in units, with no price or value.</b> If brands shift to cheaper or pricier models, this page can't see it.",
+        "<b>Some exports have no destination.</b> INEGI marks them \"not specified\" (201,000 cars in 2017 alone), "
+        "and I group them with the rest of the world.",
     ])
     yoy_strip(ef_d, start, end, label)
     c1, c2 = st.columns([1, 1.15], gap="medium")

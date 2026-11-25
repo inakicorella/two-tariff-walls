@@ -231,11 +231,17 @@ def page():
     hero(d, start, end, label)
     c = core.table("coverage").set_index("raw_brand")
     core.coverage("What this page cannot see", [
-        "<b>BYD</b>, widely reported as the best-selling Chinese brand in Mexico, has never reported to INEGI. Neither has Tesla. Their sales are missing from every line above.",
-        f"<b>Chirey and Omoda</b> stopped reporting after {c.loc['Chirey', 'last']:%B %Y} ({c.loc['Chirey', 'units'] + c.loc['Omoda', 'units']:,.0f} units reported before). From then on the China line drops because the registry lost them, not because buyers did.",
-        "<b>GAC</b> joined in November 2026 with figures back to January 2024, so 2024 and 2025 totals changed after the fact. <b>Jetour</b> was renamed (JETOUR to Jetour Soueast) and is merged here.",
-        f"<b>Motornation</b> (Changan, BAIC and JMC models) last reported in {c.loc['MOTORNATION', 'last']:%B %Y} and leaves the registry from the November 2026 report.",
-        "So the true China-made share is <b>higher</b> than shown. Turn on <i>Like-for-like brands</i> in the sidebar to keep only brands present for the whole time window.",
+        "<b>BYD and Tesla have never reported to INEGI.</b> BYD is widely reported as Mexico's best-selling Chinese brand, "
+        "so its cars are missing from every line on this page.",
+        f"<b>Chirey and Omoda stopped reporting after {c.loc['Chirey', 'last']:%B %Y}.</b> They had reported "
+        f"{c.loc['Chirey', 'units'] + c.loc['Omoda', 'units']:,.0f} cars by then. When the China line dips after that, "
+        "it's because the registry lost them, not because buyers did.",
+        "<b>GAC joined in November 2026 and sent its sales back to January 2024</b>, so the 2024 and 2025 totals changed after the fact. "
+        "Jetour changed its name to Jetour Soueast, and I count both names as one brand.",
+        f"<b>Motornation last reported in {c.loc['MOTORNATION', 'last']:%B %Y}.</b> It's the distributor behind Changan, BAIC and JMC models, "
+        "and INEGI drops it from November 2026.",
+        "All of this points the same way: the real China-made share is <b>higher</b> than shown. To compare like with like, "
+        "turn on <i>Like-for-like brands</i> in the sidebar. It keeps only brands that reported for the whole time window.",
     ])
     after_tariff(d, s, start, end, label)
     who_sells(d, end, label)

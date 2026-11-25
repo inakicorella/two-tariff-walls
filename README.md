@@ -3,6 +3,8 @@
 A Streamlit dashboard on Mexico's light-vehicle industry, built on INEGI's
 *Registro Administrativo de la Industria Automotriz de Vehículos Ligeros* (RAIAVL).
 
+**Live app:** https://two-tariff-walls.streamlit.app
+
 **Role:** analyst at the Secretaría de Economía. **Audience:** the Subsecretaría de Industria y Comercio.
 **Decision:** keep, adjust or extend the 50% tariff on light vehicles from countries without a trade
 agreement (in force since 1 January 2026), how to defend exports facing the US tariff, and whether to
