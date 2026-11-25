@@ -127,7 +127,7 @@ def page():
 <li><b>2. Close the registry gap before the review.</b> Ask every brand selling new light vehicles in Mexico, starting with BYD and Chirey, to report to the RAIAVL, for example as a condition for using import programs. A tariff review based on data that misses its main target is weak at the table.</li>
 <li><b>3. Talk to the global brands, not only the Chinese ones.</b> GM, Kia, Ford and Stellantis sell a large share of the China-made cars. They also build in Mexico and can move models here, which is what the tariff is for.</li>
 <li><b>4. Put the US wall first.</b> Exports to the US lost far more units this year than Mexico's tariff could ever protect. Brand-level tracking (Mazda, Nissan, Ford down; Stellantis, Kia up) should guide where to spend negotiating effort. Canada and Latin America are worth supporting, but they cannot replace the US.</li>
-<li><b>5. Decide what the tariff means for electric cars.</b> Plug-in hybrids tripled, largely with Chinese models. A lower rate for electric models assembled in North America would keep the tariff's purpose without stalling electrification.</li>
+<li><b>5. Decide what the tariff means for electric cars.</b> Plug-in hybrids tripled, largely with Chinese models. A lower rate for electric models from no-deal countries, tied to a plan to assemble them in Mexico, would keep the tariff's purpose without stalling electrification.</li>
 </ul>""")
     with st.expander("Method and sources"):
         st.markdown(f"""
