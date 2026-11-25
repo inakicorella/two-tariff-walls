@@ -112,7 +112,7 @@ def page():
     with c2, st.container(border=True):
         core.chart_head("What I did about it", "How the dashboard handles the gaps")
         st.html("""<ul class="recs">
-<li><b>Said it on screen.</b> Every page has an amber box with its own blind spots, and the timeline above shows who is in and out.</li>
+<li><b>Said it on screen.</b> Each analysis page has an amber box with its own blind spots, and the timeline above shows who is in and out.</li>
 <li><b>Like-for-like switch.</b> On Mexico's wall you can keep only brands present for the whole time window, so panel changes can't move the lines.</li>
 <li><b>Harmonized names.</b> One brand and group per company across tables and years (table below).</li>
 <li><b>Seasons removed.</b> 12-month rolling totals for the long run, same months of the year before for 2026.</li>
