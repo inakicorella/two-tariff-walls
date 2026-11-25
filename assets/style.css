@@ -1,0 +1,98 @@
+/* Two Tariff Walls: an editorial briefing look. Paper page, white cards, navy for action, red reserved for China in charts. */
+:root {--ink: #16181D; --ink2: #52514E; --muted: #7A786F; --line: #E1E0D9; --navy: #1F3A5F; --paper: #F7F6F2; --amber: #B26A00;}
+
+/* ---------- shell */
+.block-container {max-width: 1260px; padding-top: 4.2rem !important; padding-bottom: 3rem !important;}
+header[data-testid="stHeader"] {background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);}
+[data-testid="stTopNavLink"] {border-radius: 8px; position: relative;}
+[data-testid="stTopNavLink"] p {font-weight: 500; color: var(--ink2);}
+[data-testid="stTopNavLink"][aria-current="page"] {background: transparent !important;}
+[data-testid="stTopNavLink"][aria-current="page"] p {color: var(--navy); font-weight: 600;}
+[data-testid="stTopNavLink"][aria-current="page"]::after {content: ""; position: absolute; left: 10px; right: 10px; bottom: -9px; height: 2px; background: var(--navy); border-radius: 2px;}
+[data-testid="stSidebar"] {border-right: 1px solid var(--line);}
+[data-testid="stSidebarContent"] {padding-top: .5rem;}
+
+/* ---------- headings */
+.phead {margin: 0 0 1.4rem; max-width: 900px;}
+.phead h1 {font-family: "Source Serif 4", Georgia, serif; font-size: 2.25rem; line-height: 1.15; font-weight: 700; color: var(--ink); margin: .2rem 0 .6rem; padding: 0; letter-spacing: -.01em;}
+.phead .lead {font-size: 1.06rem; line-height: 1.6; color: var(--ink2); margin: 0;}
+.eyebrow {font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--navy); margin: 0;}
+.chead {margin: 0 0 .4rem;}
+.chead h3 {font-family: "Source Serif 4", Georgia, serif; font-size: 1.3rem; line-height: 1.3; font-weight: 600; color: var(--ink); margin: .2rem 0 .15rem; padding: 0;}
+.chead .sub {font-size: .9rem; color: var(--muted); margin: 0;}
+
+/* ---------- cards: bordered containers become white panels */
+[data-testid="stVerticalBlockBorderWrapper"]:has(> div > [data-testid="stVerticalBlock"]) {background: #fff;}
+div[data-testid="stVerticalBlock"] > div[data-testid="stVerticalBlockBorderWrapper"] {box-shadow: 0 1px 2px rgba(22,24,29,.04);}
+[data-testid="stMetric"] {background: #fff;}
+[data-testid="stMetricLabel"] p {font-size: .82rem !important; color: var(--ink2) !important; font-weight: 500;}
+[data-testid="stMetricValue"] {font-family: "Source Serif 4", Georgia, serif; font-weight: 700;}
+
+/* ---------- story pieces */
+.take {font-size: .95rem; line-height: 1.55; color: var(--ink); margin: .3rem 0 .1rem; padding: .1rem 0 .1rem .9rem; border-left: 3px solid var(--navy);}
+.take span {display: block; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--navy); margin-bottom: .15rem;}
+.cover {background: #FFF8EA; border: 1px solid #F0DDB5; border-radius: 10px; padding: .8rem 1rem .6rem; margin: .2rem 0 .6rem;}
+.cover .ct {font-weight: 600; color: #6B4300; margin: 0 0 .35rem; font-size: .92rem; display: flex; align-items: center; gap: .5rem;}
+.cover .ci {display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--amber); color: #fff; font-size: .72rem; font-weight: 700;}
+.cover ul {margin: 0; padding-left: 1.1rem;}
+.cover li {font-size: .86rem; line-height: 1.5; color: #4A3A1C; margin: 0 0 .2rem;}
+.ekey {display: flex; flex-wrap: wrap; gap: .3rem 1rem; align-items: center; font-size: .78rem; color: var(--ink2); margin: .1rem 0 .2rem;}
+.ek {display: inline-flex; align-items: center; gap: .4rem;}
+.ek i {display: inline-block; width: 18px; height: 0; border-top: 2px solid var(--navy);}
+.ek-market i {border-top: 2px dotted #7a786f;}
+.ek-registry i {border-top: 2px dashed #6250d6;}
+.ek-band i {height: 10px; border: 0; background: #e9e7df; width: 14px;}
+.eh {color: var(--muted); margin-left: auto;}
+
+/* ---------- briefing page */
+.role {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 1.2rem;}
+.role div {background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem;}
+.role p {margin: 0; font-size: .92rem; line-height: 1.5; color: var(--ink);}
+.role p.l {font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem;}
+.qs {counter-reset: q; list-style: none; padding: 0; margin: 0;}
+.qs li {counter-increment: q; position: relative; padding: .55rem 0 .55rem 2.3rem; border-bottom: 1px solid var(--line); font-size: .95rem; line-height: 1.45; color: var(--ink);}
+.qs li:last-child {border-bottom: 0;}
+.qs li::before {content: counter(q); position: absolute; left: 0; top: .5rem; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: #EEF2F7; color: var(--navy); font-weight: 600; font-size: .8rem; display: grid; place-items: center;}
+.qs li small {display: block; color: var(--muted); font-size: .82rem; margin-top: .1rem;}
+.qs a, .vs a {color: var(--navy); text-decoration: none; font-weight: 600;}
+.qs a::after {content: " →";}
+.qs a:hover, .vs a:hover {text-decoration: underline;}
+.find {display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;}
+.find div {background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--navy); border-radius: 10px; padding: .9rem 1rem;}
+.find .n {font-family: "Source Serif 4", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1.1; margin: 0;}
+.find .t {font-weight: 600; font-size: .95rem; color: var(--ink); margin: .35rem 0 .3rem;}
+.find .b {font-size: .88rem; line-height: 1.5; color: var(--ink2); margin: 0;}
+.find .china {border-top-color: #e34948;}
+.find .us {border-top-color: #2a78d6;}
+.find .gap {border-top-color: #B26A00;}
+.tbl {width: 100%; border-collapse: collapse; font-size: .88rem;}
+.tbl th {text-align: left; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: .4rem .6rem; border-bottom: 1px solid var(--line);}
+.tbl td {padding: .55rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink); line-height: 1.45;}
+.tbl tr:last-child td {border-bottom: 0;}
+.tbl td:first-child {font-weight: 600; white-space: nowrap;}
+
+/* ---------- two numbers comparison: stacked rows, number left */
+.vs {display: grid; grid-template-columns: 1fr; gap: 10px; margin: .3rem 0 .6rem;}
+.vs > div {display: grid; grid-template-columns: 5.2rem 1fr; gap: .8rem; align-items: start; border: 1px solid var(--line); border-radius: 10px; padding: .8rem .9rem; background: #fff;}
+.vs .n {font-family: "Source Serif 4", Georgia, serif; font-size: 2rem; font-weight: 700; line-height: 1; margin: .1rem 0 0;}
+.vs .up {color: #c93a39;} .vs .down {color: var(--navy);}
+.vs .l {font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin: 0 0 .2rem;}
+.vs .d {font-size: .84rem; line-height: 1.45; color: var(--ink2); margin: 0;}
+
+/* ---------- registry page lists */
+.recs {list-style: none; padding: 0; margin: 0;}
+.recs li {padding: .7rem 0; border-bottom: 1px solid var(--line); font-size: .95rem; line-height: 1.55; color: var(--ink);}
+.recs li:last-child {border-bottom: 0;}
+.recs b {color: var(--navy);}
+
+/* ---------- sidebar + footer */
+.sb-h {font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--navy); margin: .4rem 0 0;}
+.sb-note {font-size: .8rem; line-height: 1.5; color: var(--muted); margin: .2rem 0 .4rem;}
+.foot {margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--line);}
+.foot p {font-size: .78rem; line-height: 1.55; color: var(--muted); margin: 0 0 .35rem; max-width: 980px;}
+
+@media (max-width: 900px) {
+  .role, .find, .vs {grid-template-columns: 1fr;}
+  .phead h1 {font-size: 1.7rem;}
+  .eh {display: none;}
+}

@@ -1,0 +1,18 @@
+{
+  "downloaded": "2026-11-11",
+  "sales": {
+    "title": "Registro Administrativo de la Industria Automotriz de Vehículos Ligeros. Venta de vehículos 2005-2026. Información mensual, cifras revisadas al mes de Octubre.",
+    "published": "2026-11-09",
+    "covers": "2005-01-01-2026-10-31"
+  },
+  "production": {
+    "title": "Registro Administrativo de la Industria Automotriz de Vehículos Ligeros. Producción de vehículos 2005-2026. Información mensual, cifras preliminares al mes de Octubre.",
+    "published": "2026-11-09",
+    "covers": "2005-01-01-2026-10-31"
+  },
+  "exports": {
+    "title": "Registro Administrativo de la Industria Automotriz de Vehículos Ligeros. Exportación de vehículos 2005-2026. Información mensual, cifras preliminares al mes de Octubre.",
+    "published": "2026-11-09",
+    "covers": "2005-01-01-2026-10-31"
+  }
+}
